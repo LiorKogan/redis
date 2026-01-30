@@ -1,6 +1,7 @@
 {
     "XREAD": {
-        "summary": "Returns messages from multiple streams with IDs greater than the ones requested. Blocks until a message is available otherwise.",
+        "summary": "Reads entries from one or more streams according to the specified IDs, optionally blocking until entries are available or a timeout is reached.",
+        "complexity": "O(N+M) if BLOCK is not specified or if entries are returned; O(N) if BLOCK is specified and the command times out without returning entries. Where N is the number of streams specified and M is the number of entries returned.",
         "group": "stream",
         "since": "5.0.0",
         "arity": -4,
